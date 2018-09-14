@@ -1,4 +1,5 @@
 FROM norionomura/swiftlint:latest
+FROM ruby:2.5.1
 
 RUN swiftlint version
 
