@@ -2,8 +2,8 @@ FROM norionomura/swiftlint:latest
 
 RUN swiftlint version
 
-RUN apt-get install ruby-dev
-RUN apt-get update && apt-get install -y ruby
+RUN xcode-select --install
+RUN xcodebuild -license
 RUN gem install bundler rake danger danger-swiftlint danger-xcov
 RUN danger --version
 
